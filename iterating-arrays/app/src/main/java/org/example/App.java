@@ -7,19 +7,42 @@ import java.util.ArrayList;
 
 class App {
 
-    int getAverage(int[] nums) {
-        return 0;
+    double getAverage(int[] nums) {
+        double resultado = 0;
+        for (int i = 0; i < nums.length; i++) {
+            resultado += nums[i];
+        }
+
+        return resultado / nums.length;
     }
 
     int getEvens(int[] nums) {
-        return 0;
+        int par = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
+                par++;
+            }
+        }
+        return par;
     }
 
     int getGreater(int[] nums) {
-        return 0;
+        int grt = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            if (grt < nums[i]) {
+                grt = nums[i];
+            }
+        }
+        return grt;
     }
 
     int getLower(int[] nums) {
-        return 0;
+        int low = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            if (low > nums[i]) {
+                low = nums[i];
+            }
+        }
+        return low;
     }
 }

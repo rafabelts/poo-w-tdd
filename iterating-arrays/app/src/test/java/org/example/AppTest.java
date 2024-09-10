@@ -13,11 +13,11 @@ class AppTest {
     App classToTest = new App();
 
     @Test
-    void testArrays() {
+    void testAverage() {
         int[] nums = { 10, 8, 9, 10, 8 };
 
-        int want = 9;
-        int got = classToTest.getAverage(nums);
+        double want = 9.0;
+        double got = classToTest.getAverage(nums);
 
         assertEquals(
             want,
