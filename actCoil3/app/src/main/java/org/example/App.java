@@ -24,17 +24,17 @@ public class App {
                 }
 
                 logger.info("Se conoce el color de la figura?\n1) Si\n2) No");
-                int kColor = scanner.nextInt();
+                int kColor = scanner.nextInt(); // Se guarda la informacion acerca del conocimiento del color de la figura
 
                 if (kColor == 1) {
                     logger.info("Ingresa el color: ");
-                    color = scanner.next();
+                    color = scanner.next(); // Se guarda el color
                 }
 
                 logger.info("La figura esta rellena?\n1) Si\n2) No");
-                int isFilled = scanner.nextInt();
+                int isFilled = scanner.nextInt(); // Se guarda la info acerca de si se conoce si la figura esta llena o no
 
-                Figure figure = FigureFactory.createFigure(logger, option, scanner, color, (isFilled == 1));
+                Figure figure = FigureFactory.createFigure(logger, option, scanner, color, (isFilled == 1)); // La fabrica retorna la figura seleccionada
 
                 logger.info(figure.toString());
 
